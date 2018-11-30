@@ -1,19 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using Node.js <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
 
+<head>
+    <meta charset="utf-8">
+
+    <title>Activity Monitor</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/cssbundles/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Scripts -->
     <script>
-      // You can also require other files to run in this process
-      require('./renderer.js')
+        delete module.exports
     </script>
-  </body>
+    <script src="js/jsbundles/jquery-3.2.1.js"></script>
+    <script src="js/jsbundles/bootstrap.min.js"></script>
+    <script src="js/jsbundles/Chart.bundle.min.js"></script>
+    <script src="./renderer.js"></script>
+
+</head>
+
+<body>
+
+<div class="container-fluid">
+    <canvas class="chart"></canvas>
+</div>
+
+</body>
+
 </html>
